@@ -37,6 +37,11 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
             return true
         }
+        if(item.itemId == R.id.help){
+            val intent = Intent(applicationContext,Hepl::class.java)
+            startActivity(intent)
+            return true
+        }
         return false
     }
 

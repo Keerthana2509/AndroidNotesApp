@@ -10,8 +10,10 @@
         android:id="@+id/editText"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:hint="Enter some notes..."
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        android:gravity="start"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

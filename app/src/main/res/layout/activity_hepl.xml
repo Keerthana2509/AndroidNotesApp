@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    tools:context=".Hepl">
+
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1: Click on 'Add a note' to create a new note"
+        android:textSize="25sp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+    <TextView
+        android:id="@+id/text2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2: After adding the text just return back to the main Page. This will automatically save your notes"
+        android:textSize="25sp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/text1"
+        app:layout_constraintStart_toStartOf="parent"/>
+    <TextView
+        android:id="@+id/text3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="3: Click and hold the a particular note to delete the note"
+        android:textSize="25sp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/text2"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
