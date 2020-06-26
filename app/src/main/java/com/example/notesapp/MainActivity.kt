@@ -5,12 +5,13 @@ import android.content.DialogInterface
 import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
-import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
-import android.widget.AdapterView
+import android.view.View
+import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.ListView
+import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 
@@ -57,7 +58,25 @@ class MainActivity : AppCompatActivity() {
             list = ArrayList(set)
         }
         listView = findViewById<ListView>(R.id.listview)
-        arrayAdapter = ArrayAdapter(this@MainActivity,android.R.layout.simple_list_item_1,list)
+        arrayAdapter = object: ArrayAdapter<String>(this@MainActivity,android.R.layout.simple_list_item_1,list){
+            override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
+                val textView:TextView = super.getView(position,
+                    convertView, parent) as TextView
+                //textView.layoutParams.height = 150
+                val params: ViewGroup.LayoutParams = textView.layoutParams
+
+                // Set the height of the Item View
+
+                // Set the height of the Item View
+                params.height = 120
+                textView.layoutParams = params
+                // set list view item height programmatically
+               // textView.layoutParams.height = 9
+
+                return textView
+            }
+        }
+
         listView.adapter = arrayAdapter
         listView.setOnItemClickListener { parent, view, position, id ->
             val intent = Intent(applicationContext,NoteEditor::class.java)
